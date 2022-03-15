@@ -4,15 +4,7 @@
     <%- include('partials/homenavbar.ejs'); %>
     <div class="container">
         <br><br>
-        <div class="jumbotron">
-            <h1 class="display-4">GuiaPress</h1>
-            <p class="lead">Este blog trata de assuntos de tecnologia e desenvolvimento e traz as principais noticias do mercado</p>
-            <hr class="my-4">
-            <p>Assine nossa newsLetter para receber novas noticias todos os dias!</p>
-            <a class="btn btn-primary " href="#">Assinar</a>
-        </div>
-
-        <h1>Artigos:</h1>
+        <h1>Artigos sobre: <span><%= category.title %></span></h1>
 
         <% articles.forEach((article)=>{ %>
             <br>
@@ -20,7 +12,7 @@
                 <div class="card-header">
                 
                     <h3><%= article.title %></h3>
-                    <p><%= article.category.title %></p>
+                    <p><%= category.title %></p>
                 
                 </div>
             </div></a>
