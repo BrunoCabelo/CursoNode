@@ -1,0 +1,47 @@
+<%- include('../../partials/header.ejs'); %>
+<body>
+    <%- include('../../partials/navbar.ejs'); %>
+
+    <div class="container">
+        <br><br>
+        <h2>Usuarios:</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user => { %>
+                <tr>
+                    <th><%= user.id %></th>
+                    <th><%= user.name %></th>
+                    <th><%= user.email %></th>
+                    <th><form action="/users/delete" method="post" onsubmit="confirmation(event, this)">
+                        <input type="hidden" name="id" value="<%= user.id %>" >
+                        <button class="btn btn-danger">Deletar</button>
+                    </form></th>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        
+    </div>
+
+
+    <script>
+        function confirmation(event, form){
+            event.preventDefault();
+            var teste = confirm('Você deseja excluir o usuario selecionado?');
+            if(teste){
+                form.submit();
+            }else{
+
+            }
+        }
+    </script>
+    <%- include('../../partials/footer.ejs'); %>
+</body>

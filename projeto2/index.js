@@ -1,17 +1,25 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const bodyParser = require('body-parser');
-const connection = require('./database/connection');
+const bodyParser = require("body-parser");
+const session = require("express-session");
+const connection = require("./database/connection");
 
 const catergoriesController = require('./categories/CatergoriesController');
 const articlesController = require('./articles/ArticlesController');
+const usersController = require('./users/UsersController');
 
 //Modules
 const Article = require('./articles/Article');
 const Category = require('./categories/Category');
+const User = require('./users/User');
 
 //View engine
 app.set('view engine', 'ejs');
+
+//Session
+app.use(session({
+    secret: "qualquercoisa", cookie: { maxAge: 30000000 }
+}))
 
 //static
 app.use(express.static('public'));
@@ -30,6 +38,9 @@ app.use(bodyParser.json());
 //Controlers
 app.use('/', catergoriesController);
 app.use('/', articlesController);
+app.use('/', usersController);
+
+
 
 
 app.get('/', (req, res)=>{
@@ -92,6 +103,8 @@ app.get('/category/:slug', (req,res)=>{
     }
     
 });
+
+
 
 app.listen(8080, ()=>{
     console.log("servidor rodando");
