@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const Category = require('./Category');
 const slugify = require('slugify');
+const adminMiddleware = require('../middlewares/AdminAuth');
 
 router.get('/categories', (req, res)=>{
     res.send("Rota de categorias");
 });
 
-router.get('/admin/categories/new', (req, res)=>{
+router.get('/admin/categories/new', adminMiddleware, (req, res)=>{
     res.render('admin/categories/new');
 });
 
@@ -27,7 +28,7 @@ router.post('/categories/save', (req,res)=>{
     }
 });
 
-router.get('/admin/categories', (req,res)=>{
+router.get('/admin/categories',adminMiddleware, (req,res)=>{
     Category.findAll({raw: true}).then(categories =>{
         res.render('admin/categories',{
             categories: categories
@@ -59,7 +60,7 @@ router.post('/categories/delete', (req, res)=>{
     }
 });
 
-router.get('/admin/categories/edit/:id',(req,res)=>{
+router.get('/admin/categories/edit/:id', adminMiddleware,(req,res)=>{
     var id = req.params.id;
 
     if(isNaN(id)){

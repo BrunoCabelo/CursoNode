@@ -2,9 +2,10 @@ const express = require("express");
 const router = express.Router();
 const User = require("./User");
 const bcrypt = require('bcryptjs');
+const adminMiddleware = require('../middlewares/AdminAuth');
 
 
-router.get('/admin/users', (req, res)=> {
+router.get('/admin/users', adminMiddleware, (req, res)=> {
     User.findAll().then(users => {
         res.render('admin/users/index',{
             users: users
@@ -71,7 +72,7 @@ router.post('/authenticate' ,(req, res) => {
                     id: user.id,
                     email: user.email
                 }
-                res.json(req.session.user);
+                res.redirect('/admin/categories');
 
 
             }else{

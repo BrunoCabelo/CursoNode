@@ -20,4 +20,5 @@ const Article = connection.define('articles',{
 Category.hasMany(Article);  //Tem muitos
 Article.belongsTo(Category); //Pertence a um
 
+
 module.exports = Article;

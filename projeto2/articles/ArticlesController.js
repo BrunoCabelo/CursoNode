@@ -4,10 +4,12 @@ const Category = require('../categories/Category');
 const Article = require('./Article');
 const Slugify = require('slugify');
 const { default: slugify } = require('slugify');
+const adminMiddleware = require('../middlewares/AdminAuth');
 
-router.get('/admin/articles', (req, res)=>{
+router.get('/admin/articles', adminMiddleware, (req, res)=>{
     Article.findAll({
-        include: [{model: Category}]
+        include: [{model: Category}],
+        order: [['id', 'DESC']]
     }).then(articles =>{
         res.render('admin/articles/index',{
             articles : articles
@@ -16,7 +18,7 @@ router.get('/admin/articles', (req, res)=>{
     
 });
 
-router.get('/admin/articles/new', (req, res)=>{
+router.get('/admin/articles/new', adminMiddleware, (req, res)=>{
     Category.findAll().then(categories=>{
         res.render('admin/articles/new',
             {categories: categories}
@@ -57,7 +59,7 @@ router.post('/articles/delete', (req,res)=>{
     })
 });
 
-router.get('/admin/articles/edit/:id', (req,res)=>{
+router.get('/admin/articles/edit/:id', adminMiddleware, (req,res)=>{
     var id = req.params.id;
     if(id != undefined){
         Article.findByPk(id, {include: [{model: Category}]}).then((article)=>{
