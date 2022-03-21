@@ -14,7 +14,7 @@ router.get('/admin/users', adminMiddleware, (req, res)=> {
     
 });
 
-router.post('/users/delete', (req, res) => {
+router.post('/users/delete', adminMiddleware, (req, res) => {
     var id = req.body.id;
     User.destroy({where: {id: id}}).then(() => {
         res.redirect('/admin/users');
@@ -83,5 +83,10 @@ router.post('/authenticate' ,(req, res) => {
             res.redirect('/login');
         }
     })
-})
+});
+
+router.get('/logout', (req, res) => {
+    req.session.user = undefined;
+    res.redirect('/');
+});
 module.exports = router;

@@ -27,7 +27,7 @@ router.get('/admin/articles/new', adminMiddleware, (req, res)=>{
     
 });
 
-router.post('/articles/save', (req,res)=>{
+router.post('/articles/save', adminMiddleware, (req,res)=>{
     var title = req.body.title;
     var body = req.body.body;
     var category = req.body.category;
@@ -48,7 +48,7 @@ router.post('/articles/save', (req,res)=>{
     }
 });
 
-router.post('/articles/delete', (req,res)=>{
+router.post('/articles/delete', adminMiddleware, (req,res)=>{
     var id = req.body.id;
     Article.destroy({
         where:{
@@ -79,7 +79,7 @@ router.get('/admin/articles/edit/:id', adminMiddleware, (req,res)=>{
     
 });
 
-router.post('/articles/update', (req,res)=>{
+router.post('/articles/update', adminMiddleware, (req,res)=>{
     var title = req.body.title;
     var body = req.body.body;
     var categoryId = req.body.category;
