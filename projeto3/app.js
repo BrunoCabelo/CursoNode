@@ -5,22 +5,38 @@ const Table = require('./components/Class/Table');
 const HtmlParser = require('./components/Class/HtmlParser');
 const Writer = require('./components/Class/Writer');
 const PDFWriter = require('./components/Class/PDFWriter');
+const Console = require('./components/Class/Console');
 var leitor = new Reader();
 var escritor = new Writer();
 
+
+
 async function main(){
-    var data = await leitor.Read('./EstudosJS.csv');
+    var nomeArchive = await Console();
+    
+    var data = await leitor.Read('./arquivos/' + nomeArchive);
     var processedData = await Processor.Process(data);
+
+    if(processedData == false){
+        return false;
+    }
 
     var componentes = new Table(processedData);
     var html = await HtmlParser.Parse(componentes);
     
-    var result = await escritor.Write(Date.now() + '.html', html);
-    PDFWriter.WritePDF(Date.now() + '.pdf', html)
-    if(result == true){
-        console.log('Arquivo gerado');
+    var resultHTML = await escritor.Write('./arquivos/' + nomeArchive + '.html', html);
+    var resultPDF = PDFWriter.WritePDF('./arquivos/' + nomeArchive + '.pdf', html);
+
+    if(resultHTML == true){
+        console.log('Arquivo HTML gerado');
     }else{
-        console.log('Erro na construção do arquivo');
+        console.log('Erro na construção do arquivo HTML');
+    }
+
+    if(resultPDF == true){
+        console.log('Arquivo PDF gerado');
+    }else{
+        console.log('Erro na construção do arquivo PDF');
     }
 }
 
