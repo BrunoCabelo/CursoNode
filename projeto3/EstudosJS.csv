@@ -1,0 +1,87 @@
+Fornecedor,QTD,Descrição,Marca,Unit,Subtotal
+Wanderley,1,CLP DVP 8DI 6DO Transistor,Delta,900,900
+Wanderley,1,IHM ,Samkoon,900,900
+Wanderley,1,Expansão 16DI,Delta,600,600
+Wanderley,1,Expanção 8DI/8DO Transistor,Delta,600,600
+Wanderley,1,Cabo de programação,-,160,160
+Mercado livre,2,Botão azul 1NA compacto iluminado 24Vcc,Schmersal,45,90
+Rittal,1,Painel Rittal compacto com fundo galvanizado 1000x600x250,Rittal,1780,1780
+Keyence,2,Chave de segurança com cabo M12 12P 5 e 10m,Keyence,1750,3500
+View Tech,1,Chave geral 63A,WEG,280,280
+View Tech,1,Disjuntor bipolar 20A,WEG,42,42
+View Tech,1,DR bipolar 40A/30mA,WEG,180,180
+View Tech,1,Tomada 2P+T vertical trilho DIN 20A,WEG,55,55
+View Tech,1,Disjuntor bipolar 2A,WEG,55,55
+View Tech,2,Disjuntor bipolar 4A,WEG,70,140
+View Tech,2,Disjuntor unipolar 6A,WEG,40,80
+View Tech,1,Disjuntor tripolar 2A,WEG,85,85
+Cetti,1,Fonte 24V 5A,WEG,500,500
+View Tech,2,Relé de emergência CPD,WEG,530,1060
+View Tech,1,Rele dedetecção de movimento zero,WEG,1250,1250
+View Tech,4,Relé de interface/acoplador 24Vcc 6A 1 reversível,Finder,70,280
+View Tech,4,Relé de interface 24Vcc 8A 2 contato reversíveis,Finder,70,280
+View Tech,1,"Inversor de frequencia 7,5CV 24A 220V trifásico",WEG,3900,3900
+View Tech,5,Mini contator 24Vcc 12a tripolar + 1NA,WEG,250,1250
+View Tech,4,Bloco de Contato Auxiliar Frontal 1NF 1NA ,WEG ,0,0
+Cetti,5,Bloco supressor 24Vcc para contator WEG CWC0,WEG,0,0
+View Tech,2,Contator motor 220Vac 32A,WEG,250,500
+View Tech,1,Disjuntor motor 10..16A,WEG,380,380
+View Tech,2,"Disjuntor motor 2,5..4A",WEG,250,500
+Cetti,3,Botão de Emergência com Retenção 1NF,Schneider,27,80
+Cetti,3,Etiqueta amarela para botão de emergência,-,0,0
+Cetti,3,Bloco de contato NF para botão de emergência,Schneider,0,0
+Cetti,1,Botão azul 1NA iluminado 24Vcc,Schneider,0,0
+Cetti,1,Botão verde 1NA iluminado 24Vcc,Schneider,0,0
+Cetti,2,Botão verde 1NA 24Vcc,Schneider,45,90
+Cetti,7,Botão vermelho 1NF ,Schneider,13,90
+Cetti,4,Chave seletora 3 posições sem retenção 2NA,Schneider,45,180
+Cetti,2,Botão amarelo 1NA,Schneider,52,104
+Cetti,1,Sinalizador sonoro 22mm 24Vcc,Autonics,-,-
+View Tech,20,Placa de identificação para botão 22mm PART-A,Sibratec,0,0
+Cetti,2,Canaleta plástica 2 metros 50x80 LxA cinza,Dutoplast,85,170
+Cetti,1,Canaleta plástica 2 metros 30x80 LxA cinza,Dutoplast,50,50
+Cetti,1,Canaleta plástica 2 metros 30x50 LxA cinza,Dutoplast,70,70
+Cetti,2,Trilho DIN 2 metros,Conexel,72,144
+Cetti,4,"Abraçadeira plástica preta 200 x 3,6mm",-,30,120
+Cetti,2,"Abraçadeira plástica preta 100 x 2,56mm",-,-,-
+View Tech,1,Barramento terra verde 12 parafusos para trilho DIN,Sibratec,36,-
+Cetti,200,"Cabo flexível azul escuro 0,5mm²",-,-,-
+View Tech,4,Botoeria plástica 4 furos Sibratec branca,Sibratec,100,400
+View Tech,2,Botoeria plástica 1 furos Sibratec branca,Sibratec,50,100
+Cetti,1,Ventilador para painel + grelha + grade 120x120 220Vac cinza RAL7035,-,260,260
+Cetti,1,Kit filtro + grade para painel cinza RAL7035 120x120,-,0,0
+View Tech,1,Barramento distribuidor 4 polos 7 furos,Sibratec,0,0
+View Tech,2,Caixa de sobrepor em alumínio 100x100x58mm,Scame,180,360
+View Tech,1,Descondo View Tech 7%,-,0,0
+Meta,4,Sensor fotoelétrico difuso 24Vcc Pnp alcance de pelo menos 20 cm,Sick,175,700
+Meta,3,Sensor indutivo M18 com conector M12 24Vcc PNP,Sick,80,240
+Meta,2,Fotocélula retroflexiva 24V PNP alcance 2 metros,Sick,370,740
+Meta,5,Cabo M8 5m,-,38,190
+Meta,1,Cabo M8 10m,-,100,100
+Meta,1,Cabo M12 5m,-,100,100
+Meta,2,Cabo M12 10m,-,95,190
+Meta,1,Desconto Meta Automação 5%,-,0,0
+Eurocabos,15,"Cabo 18x0,75 ",-,-,-
+Eurocabos,25,"Cabo 5x0,75",-,12,300
+Eurocabos,30,Cabo 3x1,-,0,0
+Eurocabos,8,"Cabo 4x2,5+SH",-,30,240
+Eurocabos,30,"Cabo 4x1,5",-,8,240
+Dispan,1,Eletrocalhas,-,600,600
+Dispan,1,Desconto Dispan,-,0,0
+Proauto,1,Conduítes e acessorios,-,"1351,27",1351
+Sul Distribuidora,1,Bornes e acessórios,-,1136,1136
+Cetti,1,Conduítes bitola maior para calha,-,0,0
+JVR,2,"Trava Drigon 170kg, 12V",-,350,700
+Mercado Livre,2,Fonte 12V para eletroimãs,-,0,0
+Mercado Livre,4,Conectores WAGO 222,-,0,0
+Mercado Livre,2,Borne fusível para travas,-,0,0
+Mercado Livre,1,kit de etiquetas para identificação de fios,-,130,130
+Mercado Livre,2,Caixa adicional amarela para emergência,-,-,-
+Mercado Livre,4,Caixa de 4 furos Metaltex - Sibratec é muito ruim,-,-,-
+Eletrolitico,1,Terminais tipo tubular - compra adicional,-,-,-
+Botucatu Casa Grande,1,Cabo de potencia preto,-,0,0
+Botucatu Casa dos parafusos,1,Parafuso Allen,-,0,0
+Botucatu Casa dos parafusos,1,Parafuso autobrocante,-,0,0
+Mercado Livre,1,Kit de etiquetas para a centrífuga 2 e 3 ,-,0,0
+Mercado Livre,1,Cabo de programação USB,-,0,0
+Mercado Livre,1,Rele de segurança com entrada PNP,WEG,0,0
