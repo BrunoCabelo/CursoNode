@@ -4,7 +4,7 @@ class Processor{
         try{
             var a = data.split('\r\n');
             a.forEach(row => {
-                var arr = row.split(',');
+                var arr = row.split(';');
                 rows.push(arr);
             });
             return rows;

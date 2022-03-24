@@ -5,7 +5,7 @@ const Table = require('./components/Class/Table');
 const HtmlParser = require('./components/Class/HtmlParser');
 const Writer = require('./components/Class/Writer');
 const PDFWriter = require('./components/Class/PDFWriter');
-const Console = require('./components/Class/Console');
+const Console = require('./components/Functions/Console');
 var leitor = new Reader();
 var escritor = new Writer();
 
