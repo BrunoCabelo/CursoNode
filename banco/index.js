@@ -24,18 +24,33 @@ var dados = [
     console.log('Sucesso')
 }).catch(err => {
     console.log('Erro' + err);
-}); */
-
-/* Select */
-/* database.select(['id', 'nome']).table('games').then(data => {
-    console.log(data);
-}).catch(err => {
-    console.log(err);
-})
+});
  */
 
-database.select().whereRaw('preco > 100.00').table('games').then(data => {
+
+ 
+/* database.select().whereRaw('preco > 100.00').table('games').then(data => {
     console.log(data);
 }).catch(err => {
     console.log('Erro: ' + err)
+})
+ */
+
+/* database.where({id: 5}).delete().table('games').then(result => {
+    console.log('Sucess: ' + result);
+}).catch(err => {
+    console.log('Error: ' + err);
+}) */
+
+database.where({id: 9}).update({preco: 45.99}).table('games').then(result => {
+    console.log('Success: ' + result);
+}).catch(err => {
+    console.log('Error: ' + err);
+})
+
+/* Select */
+database.select().table('games').orderBy('nome', 'asc').then(data => {
+    console.log(data);
+}).catch(err => {
+    console.log(err);
 })
