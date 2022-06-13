@@ -94,7 +94,20 @@ app.get('/games', auth ,(req, res) => {
 
 app.get('/game/:id', (req,res) => {
     var id = req.params.id;
-
+    var HATEOAS = [
+        [
+            {
+                href: "http://localhost:8080/game/" + id,
+                method: "DELETE",
+                rel: "delete_game"
+            },
+            {
+                href: "http://localhost:8080/game/" + id,
+                method: "GET",
+                rel: "get_game"
+            }
+        ]
+    ]
     if(isNaN(id)){
         res.sendStatus(400)
     }else{
@@ -105,7 +118,7 @@ app.get('/game/:id', (req,res) => {
             res.sendStatus(404);
         }else{
             res.statusCode = 200;
-            res.json(game);
+            res.json({game: game, _link: HATEOAS});
         }
 
 

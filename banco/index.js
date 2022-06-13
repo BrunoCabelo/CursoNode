@@ -42,11 +42,7 @@ var dados = [
     console.log('Error: ' + err);
 }) */
 
-database.where({id: 9}).update({preco: 45.99}).table('games').then(result => {
-    console.log('Success: ' + result);
-}).catch(err => {
-    console.log('Error: ' + err);
-})
+/*   */
 
 /* Select */
 database.select().table('games').orderBy('nome', 'asc').then(data => {
