@@ -20,15 +20,15 @@ app.use(cookieParser('senha'));
 app.use(expressFlash());
 
 app.get('/', (req, res) => {
-    var emailError = req.flash('emailError');
-    var nomeError = req.flash('nomeError');
+    var emailError  = req.flash('emailError');
+    var nomeError   = req.flash('nomeError');
     var pontosError = req.flash('pontosError');
-    var email = req.flash('email');
-    var nome = req.flash('nome');
-    var pontos = req.flash('pontos');
+    var email       = req.flash('email');
+    var nome        = req.flash('nome');
+    var pontos      = req.flash('pontos');
 
-    emailError = (emailError == undefined || emailError.length == 0) ? undefined : emailError;
-    nomeError = (nomeError == undefined || nomeError.length == 0) ? undefined : nomeError;
+    emailError  = (emailError == undefined || emailError.length == 0)   ? undefined : emailError;
+    nomeError   = (nomeError == undefined || nomeError.length == 0)     ? undefined : nomeError;
     pontosError = (pontosError == undefined || pontosError.length == 0) ? undefined : pontosError; 
 
     res.render('index', {emailError, nomeError, pontosError, email, nome, pontos});
